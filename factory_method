@@ -1,0 +1,23 @@
+class Logger:
+  def log(self, message):
+    pass
+
+class FileLogger(Logger):
+  def log(self, message):
+    print("File logger:", message)
+
+class ConsoleLogger(Logger):
+  def log(self, message):
+    print("Console logger:", message)
+
+class LoggerFactory:
+  def create_logger(self):
+    pass
+
+class FileLoggerFactory(LoggerFactory):
+  def create_logger(self):
+    return FileLogger()
+
+class ConsoleLoggerFactory(LoggerFactory):
+  def create_logger(self):
+    return ConsoleLogger()
